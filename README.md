@@ -1,9 +1,5 @@
 # Advanced Network Port Scanner 🔍
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Security](https://img.shields.io/badge/Security-Tool-red)
-
 A professional-grade network port scanner with service detection, banner grabbing, and security risk assessment.
 
 ## Features ✨
@@ -18,7 +14,6 @@ A professional-grade network port scanner with service detection, banner grabbin
 - **Network Discovery**: Automatically discovers active hosts in network ranges
 
 ## Installation 📦
-
 
 # Clone repository
 
