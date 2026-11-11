@@ -2,7 +2,6 @@
 
 **Asynchronous TCP port scanner with service detection, banner grabbing and exposure classification.**
 
-[![CI](https://github.com/7xd10/Network-Scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/7xd10/Network-Scanner/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](pyproject.toml)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Typed](https://img.shields.io/badge/typed-py.typed-blue)](src/netscan/py.typed)
@@ -539,9 +538,13 @@ make check     # ruff + mypy --strict + pytest with coverage
 ```
 
 Current state: **244 tests passing, 92% branch coverage, ruff clean, mypy strict
-clean** on Linux/Python 3.12. CI runs the same suite across Python 3.9–3.13 on
-Ubuntu, macOS and Windows, plus a job that builds the wheel and installs it into a
-clean virtualenv to prove the console entry point works from a real artefact.
+clean** on Linux/Python 3.12.
+
+`.github/workflows/ci.yml` defines the matrix: lint, the test suite over Python
+3.9-3.13 on Ubuntu, macOS and Windows, and a job that builds the wheel and
+installs it into a clean environment to prove the console entry point works from
+a real artefact. That matrix is what `make check` mirrors locally — the workflow
+is configuration in the repository, not a claim about a completed run.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for what gets merged, and
 [SECURITY.md](SECURITY.md) for reporting a vulnerability in the scanner itself.
